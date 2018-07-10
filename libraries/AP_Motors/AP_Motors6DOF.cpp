@@ -143,8 +143,39 @@ void AP_Motors6DOF::setup_motors(motor_frame_class frame_class, motor_frame_type
         break;
 
     case SUB_FRAME_CUSTOM:
+    /*
+    // forward right
+    add_motor_raw_6dof(AP_MOTORS_MOT_1,     0,              0,              -1.0f,          0,                  1.0f,               0,              1);
+    // forward left
+    add_motor_raw_6dof(AP_MOTORS_MOT_2,     0,              0,              1.0f,           0,                  1.0f,               0,              2);
+    // top right
+    add_motor_raw_6dof(AP_MOTORS_MOT_3,     -0.5f,          0.5f,           0,              0.45f,              0,                  0,              3);
+    // top left
+    add_motor_raw_6dof(AP_MOTORS_MOT_4,     0.5f,           0.5f,           0,              0.45f,              0,                  0,              4);
+    // bottom
+    add_motor_raw_6dof(AP_MOTORS_MOT_5,     0,              -1.0f,          0,              1.0f,               0,                  0,              5);
+    // strafe
+    add_motor_raw_6dof(AP_MOTORS_MOT_6,     -0.25f,         0,              0,              0,                  0,                  1.0f,           6);
+    */
+
+      //top left
+        add_motor_raw_6dof(AP_MOTORS_MOT_1,      -0.5f,        -0.5f,            0,          -0.45f,                  0,              0,           1);
+      // forward right
+        add_motor_raw_6dof(AP_MOTORS_MOT_2,          0,            0,        -1.0f,               0,               1.0f,              0,           2);
+      // top right
+        add_motor_raw_6dof(AP_MOTORS_MOT_3,       0.5f,        -0.5f,            0,          -0.45f,                  0,              0,           3);
+      // bottom right
+        add_motor_raw_6dof(AP_MOTORS_MOT_4,       0.5f,         0.5f,            0,          -0.45f,                  0,              0,           4);
+      // forward left
+        add_motor_raw_6dof(AP_MOTORS_MOT_5,          0,            0,         1.0f,               0,               1.0f,              0,           5);
+      // strafe
+        add_motor_raw_6dof(AP_MOTORS_MOT_6,     -0.25f,            0,            0,               0,                  0,           1.0f,           6);
+      // bottom left
+        add_motor_raw_6dof(AP_MOTORS_MOT_7,      -0.5f,         0.5f,            0,          -0.45f,                  0,              0,           7);
+
+        break;
+
         // Put your custom motor setup here
-        //break;
 
     case SUB_FRAME_SIMPLEROV_3:
     case SUB_FRAME_SIMPLEROV_4:
